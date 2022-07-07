@@ -37,14 +37,6 @@ const Meals = (props) => {
     );
   }, [getMeals]);
 
-  // /////////////
-
-  // const avilableMeals = [
-  //   { id: "m1", name: "Meal One", disc: "the first Meal", price: 22.68 },
-  //   { id: "m2", name: "Meal Two", disc: "the second Meal", price: 23.68 },
-  //   { id: "m3", name: "Meal Three", disc: "the third Meal", price: 24.68 },
-  //   { id: "m4", name: "Meal Four", disc: "the fourth Meal", price: 25.68 },
-  // ];
   const addMealHandler = (event) => {
     const newMeal = avilableMeals.filter((ele) => {
       return ele.id === event.target.id;
@@ -60,6 +52,7 @@ const Meals = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    // getDefaultAmount("1")
   };
   // //////////
   let content = (
@@ -69,9 +62,10 @@ const Meals = (props) => {
           return (
             <li key={meal.id} className={styles.meal}>
               <Meal
+                meals
                 id={meal.id}
                 name={meal.name}
-                disc={meal.disc}
+                disc={meal.desc}
                 price={meal.price}
               ></Meal>
 
@@ -84,9 +78,9 @@ const Meals = (props) => {
                     min="1"
                     step="1"
                     max="5"
-                    // defaultValue="1"
+                    defaultValue="1"
                     onChange={amountChangehandler}
-                    value={ctx.amount}
+                    // value={ctx.amount}
                   ></input>
                 </div>
                 <button onClick={addMealHandler} id={meal.id}>
