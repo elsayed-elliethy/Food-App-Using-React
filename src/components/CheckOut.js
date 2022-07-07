@@ -86,7 +86,7 @@ const CheckOut = (props) => {
             value={enteredYourName}
           />
           {yourNameInvalid && (
-            <p className={styles["error-text"]}>Type a Valid Name Ya Ghapy</p>
+            <p className={styles["error-text"]}>Type a Valid Name</p>
           )}
         </div>
         <div className={streetCalsses}>
@@ -99,7 +99,7 @@ const CheckOut = (props) => {
             value={enteredStreet}
           />
           {streetInvalid && (
-            <p className={styles["error-text"]}>Type a Valid Street Ya Ghapy</p>
+            <p className={styles["error-text"]}>Type a Valid Street</p>
           )}
         </div>
 
@@ -113,7 +113,7 @@ const CheckOut = (props) => {
             value={enteredCode}
           />
           {codeInvalid && (
-            <p className={styles["error-text"]}>Type a Valid Code Ya Ghapy</p>
+            <p className={styles["error-text"]}>Type a Valid Code</p>
           )}
         </div>
         <div className={cityCalsses}>
@@ -126,7 +126,7 @@ const CheckOut = (props) => {
             value={enteredCity}
           />
           {cityInvalid && (
-            <p className={styles["error-text"]}>Type a Valid City Ya Ghapy</p>
+            <p className={styles["error-text"]}>Type a Valid City</p>
           )}
         </div>
         <div className={styles.actions}>

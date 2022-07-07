@@ -1,8 +1,11 @@
 .form {
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   height: 19rem;
   /* height: 200px; */
   overflow: auto;
+  width: 300px;
+  max-width: 100%;
+  margin: 1rem auto;
 }
 
 .control {
@@ -13,19 +16,21 @@
   font-weight: bold;
   margin-bottom: 0.25rem;
   display: block;
+  text-align: left;
 }
 
 .control input {
   font: inherit;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 20rem;
+  border-radius: 5px;
+  width: 90%;
   max-width: 100%;
+  text-align: center;
 }
 
 .actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -36,7 +41,7 @@
   background-color: transparent;
   border: none;
   border-radius: 25px;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .actions button:hover,
@@ -80,5 +85,4 @@ button:disabled:active {
   color: #292929 !important;
   border-color: #ccc !important;
   cursor: not-allowed;
-  /* pointer-events: none; */
 }

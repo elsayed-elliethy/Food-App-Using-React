@@ -1,10 +1,4 @@
-import React, {
-  Component,
-  Fragment,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { Component, Fragment, useContext, useState } from "react";
 import styles from "./Cart.module.css";
 import Modal from "./Modal";
 import Meal from "./Meal";
@@ -62,7 +56,9 @@ const Cart = (props) => {
   let content = showItems && (
     <div>
       <ul className={styles.mealsUL}>
-        {cartMeals.length === 0 && "No Meals Added"}
+        {cartMeals.length === 0 && (
+          <p className={styles.noMeals}>No Meals Added</p>
+        )}
         {cartMeals.map((meal) => {
           return (
             <li key={meal.id} className={styles.meal}>
@@ -132,7 +128,7 @@ const Cart = (props) => {
   if (submitForm && !error && !isLoading) {
     content = (
       <Fragment>
-        <p>Your Order Has Been Sent</p>
+        <p className={styles.success}>Your Order Has Been Sent</p>
         <div className={styles.actions}>
           <button className={styles.order} onClick={props.onClose}>
             Close
@@ -140,12 +136,8 @@ const Cart = (props) => {
         </div>
       </Fragment>
     );
-    // setShowItems(false);
   }
 
-  // useEffect(() => {
-  //   setShowItems(false);
-  // }, [!submitForm]);
   /////////////
 
   return <Modal onClose={props.onClose}>{content}</Modal>;

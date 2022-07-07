@@ -5,11 +5,7 @@ const Header = (props) => {
   const [classBump, setClassBump] = useState(false);
   const ctx = useContext(AuthContext);
 
-  // dont understand
   useEffect(() => {
-    // if (ctx.cartMeals.length === 0) {
-    //   return;
-    // }
     setClassBump(true);
     const timer = setTimeout(() => {
       setClassBump(false);
